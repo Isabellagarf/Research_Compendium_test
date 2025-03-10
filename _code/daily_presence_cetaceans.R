@@ -1,8 +1,7 @@
 # Simplified script to make the SNE baseline daily presence plot for all cetaceans
 # based on code from: GE Davis 02/10/2023, adapted from Davis et al 2020 5 species presence plot
 
-#practice edit
-#practice edit 2
+
 
 #### LOAD REQUIRED PACKAGES ####
 
