@@ -2,8 +2,7 @@
 # based on code from: GE Davis 02/10/2023, adapted from Davis et al 2020 5 species presence plot
 
 
-
-#changing line 6 online
+#new edit
 
 
 #### LOAD REQUIRED PACKAGES ####
