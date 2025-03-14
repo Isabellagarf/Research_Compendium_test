@@ -104,7 +104,7 @@ ggplot(data= allsp_forplot_noFeb29) +
                     name="Species",
                     breaks=c("Harbour Porpoise","Delphinid spp.","Sperm", "Humpback","Minke", "NARW", "Sei", "Fin", "Blue"))
 
-
+#Sophie's change 
 
 # Save plot
 ggsave("_figs/dailyPresenceAllCetatceans.png", width=10, height=8, units="in", dpi=1200)
