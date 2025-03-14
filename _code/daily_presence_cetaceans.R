@@ -33,7 +33,9 @@ all_dates <- allsp_forplot %>% ungroup() %>%  select(StartDate, SITE_NAME) %>%  
 #find missing weeks within whole data range, for each station
 missing_dates <- count_gaps(all_dates, .full=TRUE) 
 
-#Annie's change
+## this is a cool section! succinct - Annamaria
+
+
 
 #### Summarize 1 year total daily presence summary across Jan-Dec ####
 
@@ -108,7 +110,9 @@ ggplot(data= allsp_forplot_noFeb29) +
                     name="Species",
                     breaks=c("Harbour Porpoise","Delphinid spp.","Sperm", "Humpback","Minke", "NARW", "Sei", "Fin", "Blue"))
 
-#Rochelle's change
+
+#Sophie's change 
+
 
 # Save plot
 ggsave("_figs/dailyPresenceAllCetatceans.png", width=10, height=8, units="in", dpi=1200)
