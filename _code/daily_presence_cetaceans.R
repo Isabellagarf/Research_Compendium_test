@@ -30,7 +30,7 @@ all_dates <- allsp_forplot %>% ungroup() %>%  select(StartDate, SITE_NAME) %>%  
 #find missing weeks within whole data range, for each station
 missing_dates <- count_gaps(all_dates, .full=TRUE) 
 
-
+#Annie's change
 
 #### Summarize 1 year total daily presence summary across Jan-Dec ####
 
@@ -39,7 +39,7 @@ allsp_forplot$mday <- as.Date(paste(month(allsp_forplot$StartDate), day(allsp_fo
 
 #remove the one leap year day (1 day has no true detections) for plotting
 allsp_forplot_noFeb29 <- allsp_forplot %>% filter(!is.na(mday))
-
+# make a change here
 #get FPOD missing dates
 # Vector to find all missing dates in data from detection data
 all_datesporp <- allsp_forplot_noFeb29 %>%  filter(!is.na(Porpoise_Occur)) %>% ungroup() %>%  select(SITE_NAME, mday) %>%  distinct() %>% as_tsibble(index= mday, key=SITE_NAME)
@@ -105,7 +105,7 @@ ggplot(data= allsp_forplot_noFeb29) +
                     name="Species",
                     breaks=c("Harbour Porpoise","Delphinid spp.","Sperm", "Humpback","Minke", "NARW", "Sei", "Fin", "Blue"))
 
-
+#Rochelle's change
 
 # Save plot
 ggsave("_figs/dailyPresenceAllCetatceans.png", width=10, height=8, units="in", dpi=1200)
