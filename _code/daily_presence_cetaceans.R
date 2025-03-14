@@ -9,6 +9,10 @@ library(lubridate)
 library(tsibble)
 
 
+
+#### Jess change! ####
+
+
 #### READ IN COMPILED SAVED DATA ####
 all_sp <- read.csv("_data/all_sp_dataframe.csv")
 
@@ -28,6 +32,8 @@ allsp_forplot <- all_sp %>%
 all_dates <- allsp_forplot %>% ungroup() %>%  select(StartDate, SITE_NAME) %>%  distinct() %>% as_tsibble(key=SITE_NAME)
 #find missing weeks within whole data range, for each station
 missing_dates <- count_gaps(all_dates, .full=TRUE) 
+
+## this is a cool section! succinct - Annamaria
 
 
 
@@ -104,6 +110,8 @@ ggplot(data= allsp_forplot_noFeb29) +
                     name="Species",
                     breaks=c("Harbour Porpoise","Delphinid spp.","Sperm", "Humpback","Minke", "NARW", "Sei", "Fin", "Blue"))
 
+
+#Sophie's change 
 
 
 # Save plot
