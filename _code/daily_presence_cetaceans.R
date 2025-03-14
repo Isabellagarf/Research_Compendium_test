@@ -39,7 +39,7 @@ allsp_forplot$mday <- as.Date(paste(month(allsp_forplot$StartDate), day(allsp_fo
 
 #remove the one leap year day (1 day has no true detections) for plotting
 allsp_forplot_noFeb29 <- allsp_forplot %>% filter(!is.na(mday))
-
+# make a change here
 #get FPOD missing dates
 # Vector to find all missing dates in data from detection data
 all_datesporp <- allsp_forplot_noFeb29 %>%  filter(!is.na(Porpoise_Occur)) %>% ungroup() %>%  select(SITE_NAME, mday) %>%  distinct() %>% as_tsibble(index= mday, key=SITE_NAME)
