@@ -33,7 +33,9 @@ all_dates <- allsp_forplot %>% ungroup() %>%  select(StartDate, SITE_NAME) %>%  
 #find missing weeks within whole data range, for each station
 missing_dates <- count_gaps(all_dates, .full=TRUE) 
 
-#Annie's change
+## this is a cool section! succinct - Annamaria
+
+
 
 #### Summarize 1 year total daily presence summary across Jan-Dec ####
 
